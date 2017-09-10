@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="15m-F7-Jkn">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Gif Search Collection View Controller-->
+        <scene sceneID="nca-hu-PEu">
+            <objects>
+                <viewController id="rOh-MM-4oF" customClass="GifSearchCollectionViewController" customModule="WeWorkGifs" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WXY-Z1-uIv"/>
+                        <viewControllerLayoutGuide type="bottom" id="XGd-pk-RQ1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="buK-qa-u1V">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lYw-jh-5t7">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="1" green="0.34212441770000002" blue="0.35561432450000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewLayout key="collectionViewLayout" id="cH7-jG-Q4q" customClass="ColumnLayout" customModule="WeWorkGifs" customModuleProvider="target"/>
+                                <cells/>
+                            </collectionView>
+                            <view hidden="YES" alpha="0.25" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4ws-0a-MJn">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lYw-jh-5t7" firstAttribute="leading" secondItem="buK-qa-u1V" secondAttribute="leading" id="Ttd-bx-H93"/>
+                            <constraint firstItem="4ws-0a-MJn" firstAttribute="leading" secondItem="buK-qa-u1V" secondAttribute="leading" id="W8u-r7-HRY"/>
+                            <constraint firstAttribute="trailing" secondItem="lYw-jh-5t7" secondAttribute="trailing" id="Wm8-px-Nuu"/>
+                            <constraint firstItem="XGd-pk-RQ1" firstAttribute="top" secondItem="4ws-0a-MJn" secondAttribute="bottom" id="ZFT-Gz-McH"/>
+                            <constraint firstItem="XGd-pk-RQ1" firstAttribute="top" secondItem="lYw-jh-5t7" secondAttribute="bottom" id="ZGj-6i-wAm"/>
+                            <constraint firstItem="lYw-jh-5t7" firstAttribute="top" secondItem="WXY-Z1-uIv" secondAttribute="bottom" constant="-64" id="cTj-wf-5nO"/>
+                            <constraint firstAttribute="trailing" secondItem="4ws-0a-MJn" secondAttribute="trailing" id="dW8-hs-dMe"/>
+                            <constraint firstItem="4ws-0a-MJn" firstAttribute="top" secondItem="buK-qa-u1V" secondAttribute="top" id="yZP-6X-KwF"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="5Z9-e8-ocU">
+                        <nil key="title"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="lYw-jh-5t7" id="TuG-dU-u4k"/>
+                        <outlet property="tintView" destination="4ws-0a-MJn" id="84l-PE-udu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WPW-qS-n2z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1472.8" y="23.838080959520241"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="eEw-kx-Lt6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="15m-F7-Jkn" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3TX-k7-sEU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rOh-MM-4oF" kind="relationship" relationship="rootViewController" id="6ac-mW-n7G"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O0F-PS-JXc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="778.39999999999998" y="23.838080959520241"/>
+        </scene>
+    </scenes>
+</document>
